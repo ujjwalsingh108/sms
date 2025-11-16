@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -20,7 +19,6 @@ import {
   BarChart,
   Shield,
   Clock,
-  Award,
   CheckCircle,
 } from "lucide-react";
 import Header from "@/components/header";
