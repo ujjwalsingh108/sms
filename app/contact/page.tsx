@@ -66,10 +66,10 @@ export default function ContactPage() {
       <section className="relative py-24 px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-r from-blue-600/20 to-purple-600/20" />
         <div className="relative mx-auto max-w-7xl text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl mb-6">
+          <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-6xl mb-6">
             Get in Touch
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-700 dark:text-gray-300 max-w-3xl mx-auto">
             We&apos;d love to hear from you. Send us a message and we&apos;ll
             respond as soon as possible.
           </p>
@@ -85,18 +85,21 @@ export default function ContactPage() {
               return (
                 <Card
                   key={index}
-                  className="bg-slate-800/50 border-slate-700 hover:bg-slate-800 transition-all"
+                  className="bg-white dark:bg-slate-800/50 border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all shadow-sm"
                 >
                   <CardContent className="p-6 text-center">
                     <div className="h-14 w-14 rounded-full bg-blue-600/20 flex items-center justify-center mx-auto mb-4">
                       <Icon className="h-7 w-7 text-blue-500" />
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">
+                    <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">
                       {info.title}
                     </h3>
                     <div className="space-y-1">
                       {info.details.map((detail, idx) => (
-                        <p key={idx} className="text-sm text-gray-400">
+                        <p
+                          key={idx}
+                          className="text-sm text-slate-600 dark:text-gray-400"
+                        >
                           {detail}
                         </p>
                       ))}
@@ -115,10 +118,10 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
-              <h2 className="text-3xl font-bold text-white mb-4">
+              <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
                 Send us a Message
               </h2>
-              <p className="text-gray-400 mb-8">
+              <p className="text-slate-600 dark:text-gray-400 mb-8">
                 Fill out the form below and our team will get back to you within
                 24 hours.
               </p>
@@ -127,7 +130,7 @@ export default function ContactPage() {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-gray-300 mb-2"
+                    className="block text-sm font-medium text-slate-700 dark:text-gray-300 mb-2"
                   >
                     Full Name *
                   </label>
@@ -138,7 +141,7 @@ export default function ContactPage() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
+                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
                     placeholder="John Doe"
                   />
                 </div>
@@ -146,7 +149,7 @@ export default function ContactPage() {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-gray-300 mb-2"
+                    className="block text-sm font-medium text-slate-700 dark:text-gray-300 mb-2"
                   >
                     Email Address *
                   </label>
@@ -157,7 +160,7 @@ export default function ContactPage() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
+                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -165,7 +168,7 @@ export default function ContactPage() {
                 <div>
                   <label
                     htmlFor="phone"
-                    className="block text-sm font-medium text-gray-300 mb-2"
+                    className="block text-sm font-medium text-slate-700 dark:text-gray-300 mb-2"
                   >
                     Phone Number
                   </label>
@@ -175,7 +178,7 @@ export default function ContactPage() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
+                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
                     placeholder="+91 98765 43210"
                   />
                 </div>
@@ -183,7 +186,7 @@ export default function ContactPage() {
                 <div>
                   <label
                     htmlFor="school"
-                    className="block text-sm font-medium text-gray-300 mb-2"
+                    className="block text-sm font-medium text-slate-700 dark:text-gray-300 mb-2"
                   >
                     School/Institution Name
                   </label>
@@ -193,7 +196,7 @@ export default function ContactPage() {
                     name="school"
                     value={formData.school}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
+                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
                     placeholder="ABC School"
                   />
                 </div>
@@ -201,7 +204,7 @@ export default function ContactPage() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-gray-300 mb-2"
+                    className="block text-sm font-medium text-slate-700 dark:text-gray-300 mb-2"
                   >
                     Message *
                   </label>
@@ -212,7 +215,7 @@ export default function ContactPage() {
                     rows={5}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors resize-none"
                     placeholder="Tell us about your requirements..."
                   />
                 </div>
@@ -230,27 +233,31 @@ export default function ContactPage() {
 
             {/* Map Placeholder */}
             <div>
-              <h2 className="text-3xl font-bold text-white mb-4">
+              <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
                 Our Location
               </h2>
-              <p className="text-gray-400 mb-8">
+              <p className="text-slate-600 dark:text-gray-400 mb-8">
                 Visit our office or reach out to us through any of the contact
                 methods above.
               </p>
 
-              <div className="relative h-[500px] rounded-2xl overflow-hidden bg-slate-800 border border-slate-700">
+              <div className="relative h-[500px] rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800 border border-slate-300 dark:border-slate-700">
                 {/* Map placeholder - you can integrate Google Maps here */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
                     <MapPin className="h-16 w-16 text-blue-500 mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold text-white mb-2">
+                    <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
                       School ERP
                     </h3>
-                    <p className="text-gray-400">HSR Layout, Sector 2</p>
-                    <p className="text-gray-400">Bengaluru-560102, India</p>
+                    <p className="text-slate-600 dark:text-gray-400">
+                      HSR Layout, Sector 2
+                    </p>
+                    <p className="text-slate-600 dark:text-gray-400">
+                      Bengaluru-560102, India
+                    </p>
                     <Button
                       variant="outline"
-                      className="mt-6 border-blue-600 text-blue-500 hover:bg-blue-600/10"
+                      className="mt-6 border-blue-600 text-blue-600 hover:bg-blue-600/10"
                     >
                       Open in Maps
                     </Button>
@@ -263,13 +270,15 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 px-6 lg:px-8 bg-slate-900/30">
+      <section className="py-24 px-6 lg:px-8 bg-slate-100 dark:bg-slate-900/30">
         <div className="mx-auto max-w-4xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-gray-400">Quick answers to common questions</p>
+            <p className="text-slate-600 dark:text-gray-400">
+              Quick answers to common questions
+            </p>
           </div>
 
           <div className="space-y-6">
@@ -291,12 +300,15 @@ export default function ContactPage() {
                 a: "We handle complete data migration from your existing systems with zero data loss guarantee.",
               },
             ].map((faq, index) => (
-              <Card key={index} className="bg-slate-800/50 border-slate-700">
+              <Card
+                key={index}
+                className="bg-white dark:bg-slate-800/50 border-slate-200 dark:border-slate-700 shadow-sm"
+              >
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold text-white mb-2">
+                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2 font-heading">
                     {faq.q}
                   </h3>
-                  <p className="text-gray-400">{faq.a}</p>
+                  <p className="text-slate-600 dark:text-gray-400">{faq.a}</p>
                 </CardContent>
               </Card>
             ))}

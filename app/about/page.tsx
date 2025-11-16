@@ -73,10 +73,10 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-linear-to-r from-blue-600/20 to-purple-600/20" />
         <div className="relative mx-auto max-w-7xl">
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl mb-6">
+            <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-6xl mb-6 font-heading">
               About School ERP
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-700 dark:text-gray-300 max-w-3xl mx-auto">
               Empowering educational institutions with innovative technology
               solutions since 2015
             </p>
@@ -89,8 +89,10 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-white mb-6">Our Story</h2>
-              <div className="space-y-4 text-gray-300 leading-relaxed">
+              <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-6 font-heading">
+                Our Story
+              </h2>
+              <div className="space-y-4 text-slate-700 dark:text-gray-300 leading-relaxed">
                 <p>
                   School ERP was born from a simple observation: educational
                   institutions were struggling with outdated, fragmented systems
@@ -120,13 +122,13 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="py-24 px-6 lg:px-8 bg-slate-900/30">
+      <section className="py-24 px-6 lg:px-8 bg-slate-100 dark:bg-slate-900/30">
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl mb-4 font-heading">
               Our Values
             </h2>
-            <p className="text-lg text-gray-400">
+            <p className="text-lg text-slate-600 dark:text-gray-400">
               The principles that guide everything we do
             </p>
           </div>
@@ -137,16 +139,18 @@ export default function AboutPage() {
               return (
                 <Card
                   key={index}
-                  className="bg-slate-800/50 border-slate-700 hover:bg-slate-800 transition-all"
+                  className="bg-white dark:bg-slate-800/50 border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all shadow-sm"
                 >
                   <CardContent className="p-6 text-center">
                     <div className="h-16 w-16 rounded-full bg-blue-600/20 flex items-center justify-center mx-auto mb-4">
                       <Icon className="h-8 w-8 text-blue-500" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">
+                    <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3 font-heading">
                       {value.title}
                     </h3>
-                    <p className="text-gray-400">{value.description}</p>
+                    <p className="text-slate-600 dark:text-gray-400">
+                      {value.description}
+                    </p>
                   </CardContent>
                 </Card>
               );
@@ -159,10 +163,10 @@ export default function AboutPage() {
       <section className="py-24 px-6 lg:px-8">
         <div className="mx-auto max-w-5xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl mb-4 font-heading">
               Our Journey
             </h2>
-            <p className="text-lg text-gray-400">
+            <p className="text-lg text-slate-600 dark:text-gray-400">
               Milestones that shaped who we are today
             </p>
           </div>
@@ -183,18 +187,20 @@ export default function AboutPage() {
                       index % 2 === 0 ? "text-right pr-8" : "text-left pl-8"
                     }`}
                   >
-                    <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 inline-block">
-                      <div className="text-2xl font-bold text-blue-500 mb-2">
+                    <div className="bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-lg p-6 inline-block shadow-sm">
+                      <div className="text-2xl font-bold text-blue-600 dark:text-blue-500 mb-2 font-heading">
                         {item.year}
                       </div>
-                      <h3 className="text-xl font-semibold text-white mb-2">
+                      <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2 font-heading">
                         {item.event}
                       </h3>
-                      <p className="text-gray-400">{item.description}</p>
+                      <p className="text-slate-600 dark:text-gray-400">
+                        {item.description}
+                      </p>
                     </div>
                   </div>
                   <div className="relative z-10">
-                    <div className="h-4 w-4 rounded-full bg-blue-600 border-4 border-slate-900" />
+                    <div className="h-4 w-4 rounded-full bg-blue-600 border-4 border-white dark:border-slate-900" />
                   </div>
                   <div className="flex-1" />
                 </div>

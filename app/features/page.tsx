@@ -199,10 +199,10 @@ export default function FeaturesPage() {
       <section className="relative py-24 px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-r from-blue-600/20 to-purple-600/20" />
         <div className="relative mx-auto max-w-7xl text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl mb-6">
+          <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-6xl mb-6 font-heading">
             Powerful Features
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-700 dark:text-gray-300 max-w-3xl mx-auto">
             Everything you need to run your educational institution efficiently,
             all in one place
           </p>
@@ -218,21 +218,23 @@ export default function FeaturesPage() {
               return (
                 <Card
                   key={index}
-                  className="bg-slate-800/50 border-slate-700 hover:bg-slate-800 transition-all group"
+                  className="bg-white dark:bg-slate-800/50 border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all group shadow-sm"
                 >
                   <CardContent className="p-6">
                     <div className="h-14 w-14 rounded-xl bg-blue-600/20 flex items-center justify-center mb-4 group-hover:bg-blue-600/30 transition-all">
                       <Icon className="h-7 w-7 text-blue-500" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">
+                    <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3 font-heading">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-400 mb-4">{feature.description}</p>
+                    <p className="text-slate-600 dark:text-gray-400 mb-4">
+                      {feature.description}
+                    </p>
                     <ul className="space-y-2">
                       {feature.features.map((item, idx) => (
                         <li
                           key={idx}
-                          className="flex items-center gap-2 text-sm text-gray-500"
+                          className="flex items-center gap-2 text-sm text-slate-500 dark:text-gray-500"
                         >
                           <div className="h-1.5 w-1.5 rounded-full bg-blue-500" />
                           {item}
@@ -248,13 +250,13 @@ export default function FeaturesPage() {
       </section>
 
       {/* Advantages Section */}
-      <section className="py-24 px-6 lg:px-8 bg-slate-900/30">
+      <section className="py-24 px-6 lg:px-8 bg-slate-100 dark:bg-slate-900/30">
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl mb-4 font-heading">
               Why Choose Our Platform
             </h2>
-            <p className="text-lg text-gray-400">
+            <p className="text-lg text-slate-600 dark:text-gray-400">
               Built with modern technology for modern schools
             </p>
           </div>
@@ -267,10 +269,12 @@ export default function FeaturesPage() {
                   <div className="h-20 w-20 rounded-full bg-blue-600/20 flex items-center justify-center mx-auto mb-4">
                     <Icon className="h-10 w-10 text-blue-500" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">
+                  <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2 font-heading">
                     {advantage.title}
                   </h3>
-                  <p className="text-gray-400">{advantage.description}</p>
+                  <p className="text-slate-600 dark:text-gray-400">
+                    {advantage.description}
+                  </p>
                 </div>
               );
             })}
@@ -281,10 +285,10 @@ export default function FeaturesPage() {
       {/* CTA Section */}
       <section className="py-24 px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold text-white sm:text-4xl mb-6">
+          <h2 className="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl mb-6 font-heading">
             Ready to Experience These Features?
           </h2>
-          <p className="text-lg text-gray-400 mb-8">
+          <p className="text-lg text-slate-600 dark:text-gray-400 mb-8">
             Schedule a personalized demo to see how our features can transform
             your institution
           </p>
@@ -295,7 +299,7 @@ export default function FeaturesPage() {
             <Button
               size="lg"
               variant="outline"
-              className="border-gray-600 text-white hover:bg-slate-800"
+              className="border-slate-300 dark:border-gray-600 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800"
             >
               View Pricing
             </Button>
