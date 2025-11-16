@@ -35,12 +35,12 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: "Visit Us",
-      details: ["B-4/14C, Keshavpuram", "Delhi-110035", "India"],
+      details: ["HSR Layout, Sector 2", "Bengaluru-560102", "India"],
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: ["Tel: +91-11-47063886", "Mob: +91 9810564613"],
+      details: ["Tel: +91 7355957231", "Mob: +91 9044329229"],
     },
     {
       icon: Mail,
@@ -246,8 +246,8 @@ export default function ContactPage() {
                     <h3 className="text-xl font-semibold text-white mb-2">
                       School ERP
                     </h3>
-                    <p className="text-gray-400">B-4/14C, Keshavpuram</p>
-                    <p className="text-gray-400">Delhi-110035, India</p>
+                    <p className="text-gray-400">HSR Layout, Sector 2</p>
+                    <p className="text-gray-400">Bengaluru-560102, India</p>
                     <Button
                       variant="outline"
                       className="mt-6 border-blue-600 text-blue-500 hover:bg-blue-600/10"

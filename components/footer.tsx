@@ -102,14 +102,14 @@ export default function Footer() {
               <li className="flex items-start gap-2">
                 <MapPin className="h-5 w-5 text-blue-500 shrink-0 mt-0.5" />
                 <span className="text-sm text-slate-600 dark:text-gray-400">
-                  B-4/14C, Keshavpuram, Delhi-110035.
+                  HSR Layout, Sector 2, Bengaluru-560102.
                 </span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-5 w-5 text-blue-500 shrink-0" />
                 <div className="text-sm text-slate-600 dark:text-gray-400">
-                  <div>Tel: +91-11-47063886</div>
-                  <div>Mob: +91 9810564613</div>
+                  <div>Tel: +91 7355957231</div>
+                  <div>Mob: +91 9044329229</div>
                 </div>
               </li>
               <li className="flex items-center gap-2">
