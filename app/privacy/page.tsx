@@ -34,11 +34,11 @@ export default function PrivacyPage() {
                   1. Introduction
                 </h2>
                 <p className="text-slate-700 dark:text-gray-300 mb-6">
-                  Nescomm SMS ("we," "our," or "us") is committed to protecting
-                  your privacy. This Privacy Policy explains how we collect,
-                  use, disclose, and safeguard your information when you use our
-                  School Management System platform. Please read this policy
-                  carefully.
+                  Nescomm SMS (&quot;we,&quot; &quot;our,&quot; or
+                  &quot;us&quot;) is committed to protecting your privacy. This
+                  Privacy Policy explains how we collect, use, disclose, and
+                  safeguard your information when you use our School Management
+                  System platform. Please read this policy carefully.
                 </p>
 
                 <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4 font-heading">
@@ -219,14 +219,15 @@ export default function PrivacyPage() {
                 </ul>
 
                 <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4 font-heading">
-                  8. Children's Privacy
+                  8. Children&apos;s Privacy
                 </h2>
                 <p className="text-slate-700 dark:text-gray-300 mb-6">
                   Our service is designed for educational institutions and
                   involves processing data of minors. We comply with applicable
-                  children's privacy laws, including obtaining necessary
+                  children&apos;s privacy laws, including obtaining necessary
                   parental consent. Parents and guardians have the right to
-                  review, modify, or delete their child's personal information.
+                  review, modify, or delete their child&apos;s personal
+                  information.
                 </p>
 
                 <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4 font-heading">
@@ -266,9 +267,9 @@ export default function PrivacyPage() {
                 <p className="text-slate-700 dark:text-gray-300 mb-6">
                   We may update this Privacy Policy from time to time. We will
                   notify you of any material changes by posting the new policy
-                  on this page and updating the "Last Updated" date. Continued
-                  use of our service after changes constitutes acceptance of the
-                  updated policy.
+                  on this page and updating the &quot;Last Updated&quot; date.
+                  Continued use of our service after changes constitutes
+                  acceptance of the updated policy.
                 </p>
 
                 <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4 font-heading">

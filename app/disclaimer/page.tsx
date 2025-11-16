@@ -34,13 +34,14 @@ export default function DisclaimerPage() {
                   1. General Information
                 </h2>
                 <p className="text-slate-700 dark:text-gray-300 mb-6">
-                  The information provided by Nescomm SMS ("we," "us," or "our")
-                  on our platform and related services is for general
-                  informational and educational purposes only. All information
-                  is provided in good faith; however, we make no representation
-                  or warranty of any kind, express or implied, regarding the
-                  accuracy, adequacy, validity, reliability, availability, or
-                  completeness of any information on the platform.
+                  The information provided by Nescomm SMS (&quot;we,&quot;
+                  &quot;us,&quot; or &quot;our&quot;) on our platform and
+                  related services is for general informational and educational
+                  purposes only. All information is provided in good faith;
+                  however, we make no representation or warranty of any kind,
+                  express or implied, regarding the accuracy, adequacy,
+                  validity, reliability, availability, or completeness of any
+                  information on the platform.
                 </p>
 
                 <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4 font-heading">
@@ -261,9 +262,9 @@ export default function DisclaimerPage() {
                 <p className="text-slate-700 dark:text-gray-300 mb-6">
                   We may update this disclaimer from time to time to reflect
                   changes in our services or legal requirements. The updated
-                  version will be indicated by an updated "Last Updated" date.
-                  Continued use of our service after any changes constitutes
-                  acceptance of the updated disclaimer.
+                  version will be indicated by an updated &quot;Last
+                  Updated&quot; date. Continued use of our service after any
+                  changes constitutes acceptance of the updated disclaimer.
                 </p>
 
                 <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4 font-heading">

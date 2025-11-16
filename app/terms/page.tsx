@@ -64,8 +64,8 @@ export default function TermsPage() {
                     materials
                   </li>
                   <li>
-                    Transfer the materials to another person or "mirror" the
-                    materials on any other server
+                    Transfer the materials to another person or
+                    &quot;mirror&quot; the materials on any other server
                   </li>
                 </ul>
 
