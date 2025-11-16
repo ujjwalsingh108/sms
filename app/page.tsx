@@ -124,7 +124,8 @@ export default function Home() {
                   <div
                     className={`absolute inset-0 bg-linear-to-r ${slide.gradient}`}
                   >
-                    <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20" />
+                    <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 dark:opacity-20" />
+                    <div className="absolute inset-0 bg-black/20 dark:bg-black/0" />
                   </div>
 
                   {/* Content */}
@@ -147,7 +148,7 @@ export default function Home() {
                           <Button
                             size="lg"
                             variant="outline"
-                            className="border-white text-white hover:bg-white/10"
+                            className="border-white/80 text-white bg-white/10 hover:bg-white hover:text-slate-900 hover:border-white transition-all duration-300"
                           >
                             Watch Demo
                           </Button>
@@ -160,8 +161,8 @@ export default function Home() {
             ))}
           </CarouselContent>
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-4">
-            <CarouselPrevious className="relative left-0 translate-y-0" />
-            <CarouselNext className="relative right-0 translate-y-0" />
+            <CarouselPrevious className="relative left-0 translate-y-0 bg-white/90 dark:bg-slate-900/90 hover:bg-white dark:hover:bg-slate-900 border-slate-300 dark:border-slate-700" />
+            <CarouselNext className="relative right-0 translate-y-0 bg-white/90 dark:bg-slate-900/90 hover:bg-white dark:hover:bg-slate-900 border-slate-300 dark:border-slate-700" />
           </div>
         </Carousel>
       </section>
@@ -172,10 +173,12 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-blue-500 mb-2">
+                <div className="text-4xl font-bold text-blue-600 dark:text-blue-500 mb-2 font-heading">
                   {stat.value}
                 </div>
-                <div className="text-gray-400">{stat.label}</div>
+                <div className="text-slate-600 dark:text-gray-400">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
@@ -200,7 +203,7 @@ export default function Home() {
               return (
                 <Card
                   key={index}
-                  className="bg-slate-800/50 border-slate-700 hover:bg-slate-800 transition-all"
+                  className="bg-white dark:bg-slate-800/50 border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all shadow-sm"
                 >
                   <CardContent className="p-6">
                     <div className="h-12 w-12 rounded-lg bg-blue-600/20 flex items-center justify-center mb-4">
@@ -272,7 +275,7 @@ export default function Home() {
             <Button
               size="lg"
               variant="outline"
-              className="border-gray-600 text-white hover:bg-slate-800"
+              className="border-slate-300 dark:border-gray-600 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800"
             >
               Schedule a Demo
             </Button>

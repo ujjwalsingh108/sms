@@ -227,10 +227,10 @@ export default function ModulesPage() {
       <section className="relative py-24 px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-r from-blue-600/20 to-purple-600/20" />
         <div className="relative mx-auto max-w-7xl text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl mb-6">
+          <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-6xl mb-6">
             Complete ERP Modules
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-700 dark:text-gray-300 max-w-3xl mx-auto">
             Comprehensive modules designed to handle every aspect of school
             management
           </p>
@@ -246,7 +246,7 @@ export default function ModulesPage() {
               return (
                 <Card
                   key={index}
-                  className="bg-slate-800/50 border-slate-700 hover:border-slate-600 transition-all group overflow-hidden"
+                  className="bg-white dark:bg-slate-800/50 border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 transition-all group overflow-hidden shadow-sm"
                 >
                   <div className={`h-2 bg-linear-to-r ${module.color}`} />
                   <CardContent className="p-6">
@@ -279,13 +279,13 @@ export default function ModulesPage() {
       </section>
 
       {/* Integrations Section */}
-      <section className="py-24 px-6 lg:px-8 bg-slate-900/30">
+      <section className="py-24 px-6 lg:px-8 bg-slate-100 dark:bg-slate-900/30">
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl mb-4">
               Seamless Integrations
             </h2>
-            <p className="text-lg text-gray-400">
+            <p className="text-lg text-slate-600 dark:text-gray-400">
               Connect with the tools and services you already use
             </p>
           </div>
@@ -296,16 +296,16 @@ export default function ModulesPage() {
               return (
                 <Card
                   key={index}
-                  className="bg-slate-800/50 border-slate-700 hover:bg-slate-800 transition-all text-center"
+                  className="bg-white dark:bg-slate-800/50 border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all text-center shadow-sm"
                 >
                   <CardContent className="p-6">
                     <div className="h-16 w-16 rounded-full bg-blue-600/20 flex items-center justify-center mx-auto mb-4">
                       <Icon className="h-8 w-8 text-blue-500" />
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-2">
+                    <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
                       {integration.title}
                     </h3>
-                    <p className="text-sm text-gray-400">
+                    <p className="text-sm text-slate-600 dark:text-gray-400">
                       {integration.description}
                     </p>
                   </CardContent>
@@ -339,7 +339,7 @@ export default function ModulesPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white text-white hover:bg-white/10"
+                  className="border-white/80 text-white bg-white/10 hover:bg-white hover:text-blue-600 hover:border-white transition-all duration-300"
                 >
                   Contact Sales
                 </Button>
