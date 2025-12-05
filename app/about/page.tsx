@@ -74,7 +74,7 @@ export default function AboutPage() {
         <div className="relative mx-auto max-w-7xl">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-6xl mb-6 font-heading">
-              About School ERP
+              About Smart School ERP
             </h1>
             <p className="text-xl text-slate-700 dark:text-gray-300 max-w-3xl mx-auto">
               Empowering educational institutions with innovative technology
@@ -94,10 +94,10 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-slate-700 dark:text-gray-300 leading-relaxed">
                 <p>
-                  School ERP was born from a simple observation: educational
-                  institutions were struggling with outdated, fragmented systems
-                  that hindered their ability to focus on what truly matters –
-                  education.
+                  Smart School ERP was born from a simple observation:
+                  educational institutions were struggling with outdated,
+                  fragmented systems that hindered their ability to focus on
+                  what truly matters – education.
                 </p>
                 <p>
                   Founded in 2015 by a team of educators and technologists, we

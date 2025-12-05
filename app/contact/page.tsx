@@ -3,9 +3,11 @@
 import { useState } from "react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import MapPicker from "@/components/map-picker";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { supabase } from "@/lib/supabase";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -14,12 +16,74 @@ export default function ContactPage() {
     phone: "",
     school: "",
     message: "",
+    latitude: null as number | null,
+    longitude: null as number | null,
+    address: "",
+    placeId: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleLocationSelect = (location: {
+    latitude: number;
+    longitude: number;
+    address: string;
+    placeId?: string;
+  }) => {
+    setFormData({
+      ...formData,
+      latitude: location.latitude,
+      longitude: location.longitude,
+      address: location.address,
+      placeId: location.placeId || "",
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+
+    // Location is optional. If not provided, latitude/longitude will be null.
+
+    setIsSubmitting(true);
+    try {
+      const payload = {
+        name: formData.name || null,
+        email: formData.email || null,
+        phone: formData.phone || null,
+        institution_name: formData.school || null,
+        message: formData.message || null,
+        latitude: formData.latitude,
+        longitude: formData.longitude,
+        address: formData.address || null,
+        place_id: formData.placeId || null,
+        user_agent:
+          typeof navigator !== "undefined" ? navigator.userAgent : null,
+      };
+
+      const { error } = await supabase.from("enquiry").insert([payload]);
+
+      if (error) {
+        console.error("Supabase insert error:", error);
+        alert("Failed to submit form. Please try again later.");
+      } else {
+        alert("Thank you — your enquiry has been submitted.");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          school: "",
+          message: "",
+          latitude: null,
+          longitude: null,
+          address: "",
+          placeId: "",
+        });
+      }
+    } catch (err) {
+      console.error(err);
+      alert("An unexpected error occurred. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -223,47 +287,43 @@ export default function ContactPage() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-blue-600 hover:bg-blue-700"
+                  className={`w-full bg-blue-600 hover:bg-blue-700 ${
+                    isSubmitting ? "opacity-60 cursor-not-allowed" : ""
+                  }`}
+                  disabled={isSubmitting}
                 >
                   <Send className="h-5 w-5 mr-2" />
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </div>
 
-            {/* Map Placeholder */}
+            {/* Map Picker */}
             <div>
               <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
-                Our Location
+                Select Your Location (optional)
               </h2>
               <p className="text-slate-600 dark:text-gray-400 mb-8">
-                Visit our office or reach out to us through any of the contact
-                methods above.
+                Optionally click on the map or drag the marker to provide a
+                precise location for your enquiry. This is not required.
+                {formData.address && (
+                  <span className="block mt-2 text-sm font-medium text-blue-600 dark:text-blue-400">
+                    Selected: {formData.address}
+                  </span>
+                )}
               </p>
 
-              <div className="relative h-[500px] rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800 border border-slate-300 dark:border-slate-700">
-                {/* Map placeholder - you can integrate Google Maps here */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="h-16 w-16 text-blue-500 mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
-                      School ERP
-                    </h3>
-                    <p className="text-slate-600 dark:text-gray-400">
-                      HSR Layout, Sector 2
-                    </p>
-                    <p className="text-slate-600 dark:text-gray-400">
-                      Bengaluru-560102, India
-                    </p>
-                    <Button
-                      variant="outline"
-                      className="mt-6 border-blue-600 text-blue-600 hover:bg-blue-600/10"
-                    >
-                      Open in Maps
-                    </Button>
-                  </div>
-                </div>
-              </div>
+              <MapPicker
+                onLocationSelect={handleLocationSelect}
+                selectedLocation={
+                  formData.latitude && formData.longitude
+                    ? {
+                        latitude: formData.latitude,
+                        longitude: formData.longitude,
+                      }
+                    : undefined
+                }
+              />
             </div>
           </div>
         </div>

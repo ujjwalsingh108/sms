@@ -36,7 +36,7 @@ export default function Header() {
               <span className="text-white font-bold text-xl">SE</span>
             </div>
             <span className="text-xl font-bold text-slate-900 dark:text-white font-heading tracking-tight">
-              School ERP
+              Smart School ERP
             </span>
           </Link>
         </div>
@@ -84,9 +84,11 @@ export default function Header() {
               <span className="sr-only">Toggle theme</span>
             </Button>
           )}
-          <Button variant="default" className="bg-blue-600 hover:bg-blue-700">
-            Get Started
-          </Button>
+          <Link href="/contact">
+            <Button variant="default" className="bg-blue-600 hover:bg-blue-700">
+              Get Started
+            </Button>
+          </Link>
         </div>
       </nav>
 
@@ -105,12 +107,14 @@ export default function Header() {
               </Link>
             ))}
             <div className="pt-2">
-              <Button
-                variant="default"
-                className="w-full bg-blue-600 hover:bg-blue-700"
-              >
-                Get Started
-              </Button>
+              <Link href="/contact">
+                <Button
+                  variant="default"
+                  className="w-full bg-blue-600 hover:bg-blue-700"
+                >
+                  Get Started
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
