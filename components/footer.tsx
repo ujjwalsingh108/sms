@@ -13,7 +13,7 @@ export default function Footer() {
   const userLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    { name: "Why School ERP", href: "/features" },
+    { name: "Why Smart School ERP", href: "/features" },
     { name: "Features", href: "/features" },
     { name: "Modules", href: "/modules" },
     { name: "Query Management", href: "/contact" },
@@ -45,13 +45,14 @@ export default function Footer() {
                 <span className="text-white font-bold text-xl">SE</span>
               </div>
               <span className="text-xl font-bold text-slate-900 dark:text-white font-heading">
-                School ERP
+                Smart School ERP
               </span>
             </div>
             <p className="text-sm text-slate-600 dark:text-gray-400 leading-relaxed">
               Proper functioning of any institution depends upon the effective
-              workflow of each department. School ERP incorporates benefits that
-              helps institutions to manage & perform their work efficiently.
+              workflow of each department. Smart School ERP incorporates
+              benefits that helps institutions to manage & perform their work
+              efficiently.
             </p>
           </div>
 
@@ -90,6 +91,16 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <a
+                  href="https://admin.smartschoolerp.xyz/sales/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-slate-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-white transition-colors"
+                >
+                  Sales Login
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -149,7 +160,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800">
           <p className="text-center text-sm text-slate-500 dark:text-gray-500">
-            © {new Date().getFullYear()} School ERP. All rights reserved.
+            © {new Date().getFullYear()} Smart School ERP. All rights reserved.
           </p>
         </div>
       </div>

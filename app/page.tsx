@@ -229,7 +229,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl mb-6 font-heading">
-                Why Choose School ERP?
+                Why Choose Smart School ERP?
               </h2>
               <p className="text-lg text-slate-600 dark:text-gray-400 mb-8">
                 Transform your institution with cutting-edge technology designed
