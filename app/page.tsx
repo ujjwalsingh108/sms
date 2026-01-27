@@ -351,15 +351,92 @@ export default function Home() {
               </Button>
             </div>
             <div className="relative h-[300px] sm:h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-blue-600 to-purple-600 p-1">
-              <div className="h-full w-full bg-slate-900 rounded-xl flex items-center justify-center overflow-hidden">
-                <Image
-                  src="/image/sms-dashboard-img.jpg"
-                  alt="Smart School ERP Dashboard"
-                  width={800}
-                  height={400}
-                  className="object-cover w-full h-full"
-                  priority
-                />
+              <div className="h-full w-full bg-white dark:bg-slate-900 rounded-xl flex items-center justify-center p-4 sm:p-8">
+                <svg
+                  className="w-full h-full"
+                  viewBox="0 0 800 600"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  {/* Main Monitor/Dashboard */}
+                  <rect x="100" y="80" width="600" height="400" rx="20" fill="#1E293B" />
+                  <rect x="120" y="100" width="560" height="340" rx="10" fill="#0F172A" />
+                  
+                  {/* ERP Text Header */}
+                  <rect x="160" y="130" width="140" height="50" rx="8" fill="#3B82F6" fillOpacity="0.2" />
+                  <text x="230" y="165" fontSize="32" fontWeight="bold" fill="#3B82F6" textAnchor="middle">ERP</text>
+                  
+                  {/* Dashboard Elements - Left Side */}
+                  <rect x="160" y="200" width="200" height="12" rx="6" fill="#475569" />
+                  <rect x="160" y="225" width="200" height="12" rx="6" fill="#475569" />
+                  <rect x="160" y="250" width="200" height="12" rx="6" fill="#475569" />
+                  <rect x="160" y="275" width="180" height="12" rx="6" fill="#F59E0B" />
+                  <rect x="160" y="300" width="160" height="12" rx="6" fill="#EF4444" />
+                  
+                  {/* Bar Chart */}
+                  <rect x="420" y="200" width="40" height="80" rx="4" fill="#F59E0B" fillOpacity="0.8" />
+                  <rect x="470" y="160" width="40" height="120" rx="4" fill="#F59E0B" fillOpacity="0.9" />
+                  <rect x="520" y="180" width="40" height="100" rx="4" fill="#F59E0B" fillOpacity="0.7" />
+                  <rect x="570" y="140" width="40" height="140" rx="4" fill="#F59E0B" fillOpacity="1" />
+                  
+                  {/* Pie Chart */}
+                  <circle cx="570" cy="360" r="50" fill="#64748B" fillOpacity="0.3" />
+                  <path d="M 570 310 A 50 50 0 0 1 605 335 L 570 360 Z" fill="#3B82F6" />
+                  <path d="M 605 335 A 50 50 0 0 1 590 395 L 570 360 Z" fill="#10B981" />
+                  <path d="M 590 395 A 50 50 0 0 1 535 385 L 570 360 Z" fill="#F59E0B" />
+                  <path d="M 535 385 A 50 50 0 0 1 545 320 L 570 360 Z" fill="#8B5CF6" />
+                  <path d="M 545 320 A 50 50 0 0 1 570 310 L 570 360 Z" fill="#EC4899" />
+                  
+                  {/* Decorative circles around monitor */}
+                  <circle cx="150" cy="150" r="60" fill="#F59E0B" fillOpacity="0.3" />
+                  <circle cx="150" cy="150" r="40" fill="#F59E0B" fillOpacity="0.2" />
+                  <circle cx="150" cy="150" r="20" fill="#F59E0B" fillOpacity="0.4" />
+                  
+                  <circle cx="680" cy="120" r="50" fill="#F59E0B" fillOpacity="0.3" />
+                  <circle cx="680" cy="120" r="30" fill="#F59E0B" fillOpacity="0.2" />
+                  
+                  {/* People Illustrations */}
+                  {/* Person 1 - Left */}
+                  <ellipse cx="200" cy="540" rx="30" ry="10" fill="#1E293B" fillOpacity="0.2" />
+                  <rect x="185" y="480" width="30" height="50" rx="15" fill="#F59E0B" />
+                  <circle cx="200" cy="465" r="18" fill="#FCD34D" />
+                  <rect x="185" y="490" width="12" height="35" rx="6" fill="#1F2937" />
+                  <rect x="203" y="490" width="12" height="35" rx="6" fill="#1F2937" />
+                  <rect x="170" y="480" width="15" height="30" rx="7" fill="#F59E0B" />
+                  <rect x="215" y="480" width="15" height="30" rx="7" fill="#F59E0B" />
+                  
+                  {/* Person 2 - Center */}
+                  <ellipse cx="400" cy="540" rx="30" ry="10" fill="#1E293B" fillOpacity="0.2" />
+                  <rect x="385" y="480" width="30" height="50" rx="15" fill="#F59E0B" />
+                  <circle cx="400" cy="465" r="18" fill="#1F2937" />
+                  <rect x="385" y="490" width="12" height="35" rx="6" fill="#1F2937" />
+                  <rect x="403" y="490" width="12" height="35" rx="6" fill="#1F2937" />
+                  <rect x="370" y="485" width="15" height="25" rx="7" fill="#F59E0B" />
+                  <rect x="415" y="485" width="15" height="25" rx="7" fill="#F59E0B" />
+                  <path d="M 410 475 Q 420 470 430 475" stroke="#F59E0B" strokeWidth="3" fill="none" />
+                  
+                  {/* Person 3 - Right */}
+                  <ellipse cx="600" cy="540" rx="30" ry="10" fill="#1E293B" fillOpacity="0.2" />
+                  <rect x="585" y="480" width="30" height="50" rx="15" fill="#F59E0B" />
+                  <circle cx="600" cy="465" r="18" fill="#FCD34D" />
+                  <rect x="585" y="490" width="12" height="35" rx="6" fill="#1F2937" />
+                  <rect x="603" y="490" width="12" height="35" rx="6" fill="#1F2937" />
+                  <rect x="620" y="480" width="15" height="30" rx="7" fill="#F59E0B" />
+                  <path d="M 620 475 L 635 465" stroke="#F59E0B" strokeWidth="3" strokeLinecap="round" />
+                  
+                  {/* Data Points/Connections */}
+                  <circle cx="680" cy="450" r="25" fill="#FBBF24" fillOpacity="0.3" />
+                  <circle cx="680" cy="450" r="15" fill="#FBBF24" fillOpacity="0.5" />
+                  <circle cx="680" cy="450" r="8" fill="#F59E0B" />
+                  
+                  {/* Floating Elements */}
+                  <rect x="60" cy="240" width="25" height="25" rx="4" fill="#10B981" fillOpacity="0.6" />
+                  <circle cx="730" cy="300" r="20" fill="#3B82F6" fillOpacity="0.4" />
+                  
+                  {/* Checkmark for success */}
+                  <circle cx="160" cy="370" r="25" fill="#10B981" fillOpacity="0.2" />
+                  <path d="M 150 370 L 157 377 L 170 362" stroke="#10B981" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                </svg>
               </div>
             </div>
           </div>
