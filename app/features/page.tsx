@@ -192,17 +192,17 @@ export default function FeaturesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-gray-50 via-white to-gray-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
       <Header />
 
       {/* Hero Section */}
-      <section className="relative py-24 px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-r from-blue-600/20 to-purple-600/20" />
+      <section className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
         <div className="relative mx-auto max-w-7xl text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-6xl mb-6 font-heading">
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl mb-4 sm:mb-6 font-heading">
             Powerful Features
           </h1>
-          <p className="text-xl text-slate-700 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-slate-700 dark:text-gray-300 max-w-3xl mx-auto px-4">
             Everything you need to run your educational institution efficiently,
             all in one place
           </p>
@@ -210,9 +210,9 @@ export default function FeaturesPage() {
       </section>
 
       {/* Main Features Grid */}
-      <section className="py-24 px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
@@ -220,23 +220,23 @@ export default function FeaturesPage() {
                   key={index}
                   className="bg-white dark:bg-slate-800/50 border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all group shadow-sm"
                 >
-                  <CardContent className="p-6">
-                    <div className="h-14 w-14 rounded-xl bg-blue-600/20 flex items-center justify-center mb-4 group-hover:bg-blue-600/30 transition-all">
-                      <Icon className="h-7 w-7 text-blue-500" />
+                  <CardContent className="p-5 sm:p-6">
+                    <div className="h-12 w-12 sm:h-14 sm:w-14 rounded-xl bg-blue-600/20 flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-blue-600/30 transition-all">
+                      <Icon className="h-6 w-6 sm:h-7 sm:w-7 text-blue-500" />
                     </div>
-                    <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3 font-heading">
+                    <h3 className="text-lg sm:text-xl font-semibold text-slate-900 dark:text-white mb-2 sm:mb-3 font-heading">
                       {feature.title}
                     </h3>
-                    <p className="text-slate-600 dark:text-gray-400 mb-4">
+                    <p className="text-sm sm:text-base text-slate-600 dark:text-gray-400 mb-3 sm:mb-4">
                       {feature.description}
                     </p>
                     <ul className="space-y-2">
                       {feature.features.map((item, idx) => (
                         <li
                           key={idx}
-                          className="flex items-center gap-2 text-sm text-slate-500 dark:text-gray-500"
+                          className="flex items-center gap-2 text-xs sm:text-sm text-slate-500 dark:text-gray-500"
                         >
-                          <div className="h-1.5 w-1.5 rounded-full bg-blue-500" />
+                          <div className="h-1.5 w-1.5 rounded-full bg-blue-500 shrink-0" />
                           {item}
                         </li>
                       ))}
@@ -250,29 +250,29 @@ export default function FeaturesPage() {
       </section>
 
       {/* Advantages Section */}
-      <section className="py-24 px-6 lg:px-8 bg-slate-100 dark:bg-slate-900/30">
+      <section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-slate-100 dark:bg-slate-900/30">
         <div className="mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl mb-4 font-heading">
+          <div className="text-center mb-10 sm:mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl mb-3 sm:mb-4 font-heading">
               Why Choose Our Platform
             </h2>
-            <p className="text-lg text-slate-600 dark:text-gray-400">
+            <p className="text-base sm:text-lg text-slate-600 dark:text-gray-400">
               Built with modern technology for modern schools
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4">
             {advantages.map((advantage, index) => {
               const Icon = advantage.icon;
               return (
                 <div key={index} className="text-center">
-                  <div className="h-20 w-20 rounded-full bg-blue-600/20 flex items-center justify-center mx-auto mb-4">
-                    <Icon className="h-10 w-10 text-blue-500" />
+                  <div className="h-16 w-16 sm:h-20 sm:w-20 rounded-full bg-blue-600/20 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                    <Icon className="h-8 w-8 sm:h-10 sm:w-10 text-blue-500" />
                   </div>
-                  <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2 font-heading">
+                  <h3 className="text-lg sm:text-xl font-semibold text-slate-900 dark:text-white mb-2 font-heading">
                     {advantage.title}
                   </h3>
-                  <p className="text-slate-600 dark:text-gray-400">
+                  <p className="text-sm sm:text-base text-slate-600 dark:text-gray-400">
                     {advantage.description}
                   </p>
                 </div>
@@ -283,23 +283,23 @@ export default function FeaturesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl mb-6 font-heading">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl mb-4 sm:mb-6 font-heading">
             Ready to Experience These Features?
           </h2>
-          <p className="text-lg text-slate-600 dark:text-gray-400 mb-8">
+          <p className="text-base sm:text-lg text-slate-600 dark:text-gray-400 mb-6 sm:mb-8">
             Schedule a personalized demo to see how our features can transform
             your institution
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 w-full sm:w-auto">
               Request Demo
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-slate-300 dark:border-gray-600 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800"
+              className="border-slate-300 dark:border-gray-600 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 w-full sm:w-auto"
             >
               View Pricing
             </Button>

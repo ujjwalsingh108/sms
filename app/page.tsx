@@ -106,7 +106,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-gray-50 via-white to-gray-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
       <Header />
 
       {/* Hero Section with Carousel */}
@@ -120,7 +120,7 @@ export default function Home() {
           <CarouselContent>
             {carouselSlides.map((slide, index) => (
               <CarouselItem key={index}>
-                <div className="relative h-[600px] md:h-[700px]">
+                <div className="relative h-[500px] sm:h-[600px] md:h-[700px]">
                   {/* Background Image Placeholder */}
                   <div
                     className={`absolute inset-0 bg-gradient-to-r ${slide.gradient}`}
@@ -131,26 +131,26 @@ export default function Home() {
 
                   {/* Content */}
                   <div className="relative h-full flex items-center">
-                    <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
                         <div className="max-w-2xl">
-                          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl mb-6 font-heading">
+                          <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6 font-heading">
                             {slide.title}
                           </h1>
-                          <p className="text-lg leading-8 text-gray-200 mb-8">
+                          <p className="text-base sm:text-lg leading-7 sm:leading-8 text-gray-200 mb-6 sm:mb-8">
                             {slide.description}
                           </p>
-                          <div className="flex gap-4">
+                          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                             <Button
                               size="lg"
-                              className="bg-white text-slate-900 hover:bg-gray-100"
+                              className="bg-white text-slate-900 hover:bg-gray-100 w-full sm:w-auto"
                             >
                               Get Started
                             </Button>
                             <Button
                               size="lg"
                               variant="outline"
-                              className="border-white/80 text-white bg-white/10 hover:bg-white hover:text-slate-900 hover:border-white transition-all duration-300"
+                              className="border-white/80 text-white bg-white/10 hover:bg-white hover:text-slate-900 hover:border-white transition-all duration-300 w-full sm:w-auto"
                             >
                               Watch Demo
                             </Button>
@@ -261,23 +261,23 @@ export default function Home() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-4">
-            <CarouselPrevious className="relative left-0 translate-y-0 bg-white/90 dark:bg-slate-900/90 hover:bg-white dark:hover:bg-slate-900 border-slate-300 dark:border-slate-700" />
-            <CarouselNext className="relative right-0 translate-y-0 bg-white/90 dark:bg-slate-900/90 hover:bg-white dark:hover:bg-slate-900 border-slate-300 dark:border-slate-700" />
+          <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex gap-2 sm:gap-4">
+            <CarouselPrevious className="relative left-0 translate-y-0 bg-white/90 dark:bg-slate-900/90 hover:bg-white dark:hover:bg-slate-900 border-slate-300 dark:border-slate-700 h-9 w-9 sm:h-10 sm:w-10" />
+            <CarouselNext className="relative right-0 translate-y-0 bg-white/90 dark:bg-slate-900/90 hover:bg-white dark:hover:bg-slate-900 border-slate-300 dark:border-slate-700 h-9 w-9 sm:h-10 sm:w-10" />
           </div>
         </Carousel>
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+      <section className="py-12 sm:py-16 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-4">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-blue-600 dark:text-blue-500 mb-2 font-heading">
+                <div className="text-3xl sm:text-4xl font-bold text-blue-600 dark:text-blue-500 mb-2 font-heading">
                   {stat.value}
                 </div>
-                <div className="text-slate-600 dark:text-gray-400">
+                <div className="text-sm sm:text-base text-slate-600 dark:text-gray-400">
                   {stat.label}
                 </div>
               </div>
@@ -287,18 +287,18 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 px-6 lg:px-8">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl mb-4 font-heading">
-              Powerful Features for Modern Schools
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl mb-3 sm:mb-4 font-heading">
+              Powerful Features
             </h2>
-            <p className="text-lg text-slate-600 dark:text-gray-400">
-              Everything you need to manage your institution efficiently
+            <p className="text-base sm:text-lg text-slate-600 dark:text-gray-400 px-4">
+              Everything you need to manage your educational institution
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
@@ -325,32 +325,32 @@ export default function Home() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-24 px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/30">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/30">
         <div className="mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl mb-6 font-heading">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl mb-4 sm:mb-6 font-heading">
                 Why Choose Smart School ERP?
               </h2>
-              <p className="text-lg text-slate-600 dark:text-gray-400 mb-8">
+              <p className="text-base sm:text-lg text-slate-600 dark:text-gray-400 mb-6 sm:mb-8">
                 Transform your institution with cutting-edge technology designed
                 specifically for educational excellence.
               </p>
-              <ul className="space-y-4">
+              <ul className="space-y-3 sm:space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="h-6 w-6 text-green-500 shrink-0 mt-0.5" />
-                    <span className="text-slate-700 dark:text-gray-300">
+                    <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-green-500 shrink-0 mt-0.5" />
+                    <span className="text-sm sm:text-base text-slate-700 dark:text-gray-300">
                       {benefit}
                     </span>
                   </li>
                 ))}
               </ul>
-              <Button size="lg" className="mt-8 bg-blue-600 hover:bg-blue-700">
+              <Button size="lg" className="mt-6 sm:mt-8 bg-blue-600 hover:bg-blue-700 w-full sm:w-auto">
                 Learn More
               </Button>
             </div>
-            <div className="relative h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-blue-600 to-purple-600 p-1">
+            <div className="relative h-[300px] sm:h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-blue-600 to-purple-600 p-1">
               <div className="h-full w-full bg-slate-900 rounded-xl flex items-center justify-center overflow-hidden">
                 <Image
                   src="/image/sms-dashboard-img.jpg"
@@ -367,23 +367,23 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 lg:px-8">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl mb-6 font-heading">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl mb-4 sm:mb-6 font-heading">
             Ready to Transform Your School?
           </h2>
-          <p className="text-lg text-slate-600 dark:text-gray-400 mb-8">
+          <p className="text-base sm:text-lg text-slate-600 dark:text-gray-400 mb-6 sm:mb-8">
             Join hundreds of schools already using our platform to streamline
             their operations
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 w-full sm:w-auto">
               Start Free Trial
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-slate-300 dark:border-gray-600 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800"
+              className="border-slate-300 dark:border-gray-600 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 w-full sm:w-auto"
             >
               Schedule a Demo
             </Button>

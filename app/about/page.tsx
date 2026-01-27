@@ -66,7 +66,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-gray-50 via-white to-gray-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
       <Header />
 
       {/* Hero Section */}
@@ -86,14 +86,14 @@ export default function AboutPage() {
       </section>
 
       {/* Story Section */}
-      <section className="py-24 px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-6 font-heading">
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-4 sm:mb-6 font-heading">
                 Our Story
               </h2>
-              <div className="space-y-4 text-slate-700 dark:text-gray-300 leading-relaxed">
+              <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-slate-700 dark:text-gray-300 leading-relaxed">
                 <p>
                   Smart School ERP was born from a simple observation:
                   educational institutions were struggling with outdated,
@@ -113,7 +113,7 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="relative h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-blue-600 to-purple-600 p-1">
+            <div className="relative h-[300px] sm:h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-blue-600 to-purple-600 p-1">
               <div className="h-full w-full bg-slate-900 rounded-xl flex items-center justify-center overflow-hidden">
                 <Image
                   src="/image/team-work-sms.jpg"

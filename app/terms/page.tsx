@@ -4,27 +4,27 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function TermsPage() {
   return (
-    <div className="min-h-screen bg-linear-to-br from-gray-50 via-white to-gray-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
       <Header />
 
       {/* Hero Section */}
-      <section className="relative py-24 px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-r from-blue-600/20 to-purple-600/20" />
+      <section className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
         <div className="relative mx-auto max-w-7xl text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-6xl mb-6">
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl mb-4 sm:mb-6 font-heading">
             Terms and Conditions
           </h1>
-          <p className="text-xl text-slate-700 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-slate-700 dark:text-gray-300 max-w-3xl mx-auto px-4">
             Please read these terms carefully before using our services
           </p>
         </div>
       </section>
 
       {/* Content Section */}
-      <section className="py-16 px-6 lg:px-8">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
           <Card className="bg-white dark:bg-slate-800/50 border-slate-200 dark:border-slate-700 shadow-sm">
-            <CardContent className="p-8 md:p-12">
+            <CardContent className="p-6 sm:p-8 md:p-12">
               <div className="prose prose-slate dark:prose-invert max-w-none">
                 <p className="text-sm text-slate-600 dark:text-gray-400 mb-8">
                   Last Updated: November 16, 2025

@@ -123,17 +123,17 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-gray-50 via-white to-gray-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
       <Header />
 
       {/* Hero Section */}
-      <section className="relative py-24 px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-r from-blue-600/20 to-purple-600/20" />
+      <section className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
         <div className="relative mx-auto max-w-7xl text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-6xl mb-6">
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl mb-4 sm:mb-6 font-heading">
             Get in Touch
           </h1>
-          <p className="text-xl text-slate-700 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-slate-700 dark:text-gray-300 max-w-3xl mx-auto px-4">
             We&apos;d love to hear from you. Send us a message and we&apos;ll
             respond as soon as possible.
           </p>
@@ -141,9 +141,9 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Info Cards */}
-      <section className="py-16 px-6 lg:px-8">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-4">
             {contactInfo.map((info, index) => {
               const Icon = info.icon;
               return (
@@ -151,18 +151,18 @@ export default function ContactPage() {
                   key={index}
                   className="bg-white dark:bg-slate-800/50 border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all shadow-sm"
                 >
-                  <CardContent className="p-6 text-center">
-                    <div className="h-14 w-14 rounded-full bg-blue-600/20 flex items-center justify-center mx-auto mb-4">
-                      <Icon className="h-7 w-7 text-blue-500" />
+                  <CardContent className="p-5 sm:p-6 text-center">
+                    <div className="h-12 w-12 sm:h-14 sm:w-14 rounded-full bg-blue-600/20 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                      <Icon className="h-6 w-6 sm:h-7 sm:w-7 text-blue-500" />
                     </div>
-                    <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">
+                    <h3 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white mb-2 sm:mb-3 font-heading">
                       {info.title}
                     </h3>
                     <div className="space-y-1">
                       {info.details.map((detail, idx) => (
                         <p
                           key={idx}
-                          className="text-sm text-slate-600 dark:text-gray-400"
+                          className="text-xs sm:text-sm text-slate-600 dark:text-gray-400"
                         >
                           {detail}
                         </p>
@@ -177,20 +177,20 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form & Map Section */}
-      <section className="py-24 px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
             {/* Contact Form */}
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-3 sm:mb-4 font-heading">
                 Send us a Message
               </h2>
-              <p className="text-slate-600 dark:text-gray-400 mb-8">
+              <p className="text-sm sm:text-base text-slate-600 dark:text-gray-400 mb-6 sm:mb-8">
                 Fill out the form below and our team will get back to you within
                 24 hours.
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
                 <div>
                   <label
                     htmlFor="name"
@@ -300,10 +300,10 @@ export default function ContactPage() {
 
             {/* Map Picker */}
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-3 sm:mb-4 font-heading">
                 Select Your Location (optional)
               </h2>
-              <p className="text-slate-600 dark:text-gray-400 mb-8">
+              <p className="text-sm sm:text-base text-slate-600 dark:text-gray-400 mb-6 sm:mb-8">
                 Optionally click on the map or drag the marker to provide a
                 precise location for your enquiry. This is not required.
                 {formData.address && (
@@ -330,18 +330,18 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 px-6 lg:px-8 bg-slate-100 dark:bg-slate-900/30">
+      <section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-slate-100 dark:bg-slate-900/30">
         <div className="mx-auto max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-3 sm:mb-4 font-heading">
               Frequently Asked Questions
             </h2>
-            <p className="text-slate-600 dark:text-gray-400">
+            <p className="text-sm sm:text-base text-slate-600 dark:text-gray-400">
               Quick answers to common questions
             </p>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {[
               {
                 q: "What is the implementation timeline?",
