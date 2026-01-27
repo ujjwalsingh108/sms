@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -122,7 +123,7 @@ export default function Home() {
                 <div className="relative h-[600px] md:h-[700px]">
                   {/* Background Image Placeholder */}
                   <div
-                    className={`absolute inset-0 bg-linear-to-r ${slide.gradient}`}
+                    className={`absolute inset-0 bg-gradient-to-r ${slide.gradient}`}
                   >
                     <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 dark:opacity-20" />
                     <div className="absolute inset-0 bg-black/20 dark:bg-black/0" />
@@ -131,27 +132,127 @@ export default function Home() {
                   {/* Content */}
                   <div className="relative h-full flex items-center">
                     <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                      <div className="max-w-2xl">
-                        <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl mb-6 font-heading">
-                          {slide.title}
-                        </h1>
-                        <p className="text-lg leading-8 text-gray-200 mb-8">
-                          {slide.description}
-                        </p>
-                        <div className="flex gap-4">
-                          <Button
-                            size="lg"
-                            className="bg-white text-slate-900 hover:bg-gray-100"
-                          >
-                            Get Started
-                          </Button>
-                          <Button
-                            size="lg"
-                            variant="outline"
-                            className="border-white/80 text-white bg-white/10 hover:bg-white hover:text-slate-900 hover:border-white transition-all duration-300"
-                          >
-                            Watch Demo
-                          </Button>
+                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div className="max-w-2xl">
+                          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl mb-6 font-heading">
+                            {slide.title}
+                          </h1>
+                          <p className="text-lg leading-8 text-gray-200 mb-8">
+                            {slide.description}
+                          </p>
+                          <div className="flex gap-4">
+                            <Button
+                              size="lg"
+                              className="bg-white text-slate-900 hover:bg-gray-100"
+                            >
+                              Get Started
+                            </Button>
+                            <Button
+                              size="lg"
+                              variant="outline"
+                              className="border-white/80 text-white bg-white/10 hover:bg-white hover:text-slate-900 hover:border-white transition-all duration-300"
+                            >
+                              Watch Demo
+                            </Button>
+                          </div>
+                        </div>
+                        <div className="hidden lg:flex justify-center items-center">
+                          {index === 0 && (
+                            <svg
+                              className="w-96 h-96"
+                              viewBox="0 0 400 400"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              {/* School Building */}
+                              <rect x="80" y="120" width="240" height="200" fill="white" opacity="0.95" rx="8" />
+                              <rect x="80" y="100" width="240" height="30" fill="white" opacity="0.95" />
+                              <circle cx="200" cy="115" r="8" fill="#3B82F6" />
+                              {/* Windows */}
+                              <rect x="100" y="140" width="40" height="40" fill="#3B82F6" opacity="0.6" rx="4" />
+                              <rect x="160" y="140" width="40" height="40" fill="#3B82F6" opacity="0.6" rx="4" />
+                              <rect x="220" y="140" width="40" height="40" fill="#3B82F6" opacity="0.6" rx="4" />
+                              <rect x="280" y="140" width="40" height="40" fill="#3B82F6" opacity="0.6" rx="4" />
+                              <rect x="100" y="200" width="40" height="40" fill="#3B82F6" opacity="0.6" rx="4" />
+                              <rect x="160" y="200" width="40" height="40" fill="#3B82F6" opacity="0.6" rx="4" />
+                              <rect x="220" y="200" width="40" height="40" fill="#3B82F6" opacity="0.6" rx="4" />
+                              <rect x="280" y="200" width="40" height="40" fill="#3B82F6" opacity="0.6" rx="4" />
+                              {/* Door */}
+                              <rect x="170" y="260" width="60" height="60" fill="#1E40AF" rx="4" />
+                              <circle cx="215" cy="290" r="3" fill="white" />
+                              {/* Digital Elements */}
+                              <circle cx="320" cy="80" r="40" fill="white" opacity="0.9" />
+                              <path d="M310 80 L320 90 L340 70" stroke="#10B981" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+                              <circle cx="80" cy="80" r="40" fill="white" opacity="0.9" />
+                              <path d="M70 75 L70 85 M75 80 L85 80" stroke="#3B82F6" strokeWidth="4" strokeLinecap="round" />
+                            </svg>
+                          )}
+                          {index === 1 && (
+                            <svg
+                              className="w-96 h-96"
+                              viewBox="0 0 400 400"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              {/* Student Profile Card */}
+                              <rect x="60" y="80" width="280" height="240" fill="white" opacity="0.95" rx="16" />
+                              {/* Avatar */}
+                              <circle cx="200" cy="140" r="40" fill="#A855F7" opacity="0.8" />
+                              <circle cx="200" cy="135" r="15" fill="white" />
+                              <path d="M170 165 Q200 175 230 165" stroke="white" strokeWidth="8" strokeLinecap="round" fill="none" />
+                              {/* Info Lines */}
+                              <rect x="120" y="200" width="160" height="12" fill="#A855F7" opacity="0.4" rx="6" />
+                              <rect x="140" y="220" width="120" height="12" fill="#A855F7" opacity="0.3" rx="6" />
+                              <rect x="130" y="240" width="140" height="12" fill="#A855F7" opacity="0.2" rx="6" />
+                              {/* Stats Cards */}
+                              <rect x="80" y="270" width="70" height="35" fill="#3B82F6" opacity="0.8" rx="8" />
+                              <rect x="165" y="270" width="70" height="35" fill="#10B981" opacity="0.8" rx="8" />
+                              <rect x="250" y="270" width="70" height="35" fill="#F59E0B" opacity="0.8" rx="8" />
+                              {/* Floating Icons */}
+                              <circle cx="320" cy="100" r="30" fill="white" opacity="0.9" />
+                              <path d="M310 100 L320 110 L340 90" stroke="#10B981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                              <circle cx="80" cy="220" r="25" fill="white" opacity="0.9" />
+                              <rect x="70" y="215" width="20" height="15" fill="#3B82F6" rx="2" />
+                            </svg>
+                          )}
+                          {index === 2 && (
+                            <svg
+                              className="w-96 h-96"
+                              viewBox="0 0 400 400"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              {/* Staff Management Dashboard */}
+                              <rect x="50" y="70" width="300" height="260" fill="white" opacity="0.95" rx="16" />
+                              {/* Header */}
+                              <rect x="50" y="70" width="300" height="50" fill="#EC4899" opacity="0.8" rx="16" />
+                              <circle cx="80" cy="95" r="15" fill="white" opacity="0.9" />
+                              {/* Staff Cards */}
+                              <rect x="70" y="140" width="120" height="80" fill="#EC4899" opacity="0.3" rx="12" />
+                              <circle cx="130" cy="165" r="20" fill="#EC4899" opacity="0.8" />
+                              <rect x="90" y="195" width="80" height="8" fill="#EC4899" opacity="0.6" rx="4" />
+                              <rect x="100" y="210" width="60" height="8" fill="#EC4899" opacity="0.4" rx="4" />
+                              
+                              <rect x="210" y="140" width="120" height="80" fill="#EC4899" opacity="0.3" rx="12" />
+                              <circle cx="270" cy="165" r="20" fill="#EC4899" opacity="0.8" />
+                              <rect x="230" y="195" width="80" height="8" fill="#EC4899" opacity="0.6" rx="4" />
+                              <rect x="240" y="210" width="60" height="8" fill="#EC4899" opacity="0.4" rx="4" />
+                              
+                              <rect x="70" y="235" width="120" height="80" fill="#EC4899" opacity="0.3" rx="12" />
+                              <circle cx="130" cy="260" r="20" fill="#EC4899" opacity="0.8" />
+                              <rect x="90" y="290" width="80" height="8" fill="#EC4899" opacity="0.6" rx="4" />
+                              <rect x="100" y="305" width="60" height="8" fill="#EC4899" opacity="0.4" rx="4" />
+                              
+                              <rect x="210" y="235" width="120" height="80" fill="#EC4899" opacity="0.3" rx="12" />
+                              <circle cx="270" cy="260" r="20" fill="#EC4899" opacity="0.8" />
+                              <rect x="230" y="290" width="80" height="8" fill="#EC4899" opacity="0.6" rx="4" />
+                              <rect x="240" y="305" width="60" height="8" fill="#EC4899" opacity="0.4" rx="4" />
+                              
+                              {/* Floating Action Icons */}
+                              <circle cx="320" cy="120" r="35" fill="white" opacity="0.95" />
+                              <path d="M310 120 L320 120 M315 115 L315 125" stroke="#10B981" strokeWidth="3" strokeLinecap="round" />
+                            </svg>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -249,9 +350,16 @@ export default function Home() {
                 Learn More
               </Button>
             </div>
-            <div className="relative h-[400px] rounded-2xl overflow-hidden bg-linear-to-br from-blue-600 to-purple-600 p-1">
-              <div className="h-full w-full bg-slate-900 rounded-xl flex items-center justify-center">
-                <GraduationCap className="h-48 w-48 text-blue-500/20" />
+            <div className="relative h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-blue-600 to-purple-600 p-1">
+              <div className="h-full w-full bg-slate-900 rounded-xl flex items-center justify-center overflow-hidden">
+                <Image
+                  src="/image/sms-dashboard-img.jpg"
+                  alt="Smart School ERP Dashboard"
+                  width={800}
+                  height={400}
+                  className="object-cover w-full h-full"
+                  priority
+                />
               </div>
             </div>
           </div>

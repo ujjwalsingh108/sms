@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -112,9 +113,16 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="relative h-[400px] rounded-2xl overflow-hidden bg-linear-to-br from-blue-600 to-purple-600 p-1">
-              <div className="h-full w-full bg-slate-900 rounded-xl flex items-center justify-center">
-                <Users2 className="h-48 w-48 text-blue-500/20" />
+            <div className="relative h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-blue-600 to-purple-600 p-1">
+              <div className="h-full w-full bg-slate-900 rounded-xl flex items-center justify-center overflow-hidden">
+                <Image
+                  src="/image/team-work-sms.jpg"
+                  alt="Our Story - Team Collaboration"
+                  width={800}
+                  height={400}
+                  className="object-cover w-full h-full"
+                  priority
+                />
               </div>
             </div>
           </div>
