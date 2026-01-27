@@ -23,8 +23,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Nescomm SMS",
-  description: "Nescomm School Management System",
+  title: "Smart School ERP",
+  description: "Smart School ERP Management System",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
