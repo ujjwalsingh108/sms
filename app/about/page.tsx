@@ -115,14 +115,44 @@ export default function AboutPage() {
             </div>
             <div className="relative h-[300px] sm:h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-blue-600 to-purple-600 p-1">
               <div className="h-full w-full bg-slate-900 rounded-xl flex items-center justify-center overflow-hidden">
-                <Image
-                  src="/image/team-work-sms.jpg"
-                  alt="Our Story - Team Collaboration"
-                  width={800}
-                  height={400}
-                  className="object-cover w-full h-full"
-                  priority
-                />
+                {/* Custom SVG illustration: Teamwork and growth */}
+                <svg viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                  {/* Bar chart */}
+                  <rect x="40" y="180" width="40" height="50" fill="#a7f3d0" />
+                  <rect x="100" y="140" width="40" height="90" fill="#6ee7b7" />
+                  <rect x="160" y="100" width="40" height="130" fill="#34d399" />
+                  <rect x="220" y="60" width="40" height="170" fill="#10b981" />
+                  <rect x="280" y="30" width="40" height="200" fill="#059669" />
+                  {/* Upward arrow */}
+                  <polyline points="60,180 120,140 180,100 240,60 300,30" fill="none" stroke="#4f46e5" strokeWidth="6" />
+                  <polygon points="300,30 292,45 308,45" fill="#4f46e5" />
+                  {/* People helping each other */}
+                  {/* Person 1 (bottom left) */}
+                  <circle cx="60" cy="180" r="13" fill="#f1f5f9" stroke="#64748b" strokeWidth="2" />
+                  <rect x="54" y="193" width="12" height="25" rx="6" fill="#6ee7b7" />
+                  <rect x="66" y="193" width="8" height="25" rx="4" fill="#64748b" />
+                  {/* Person 2 (middle left) */}
+                  <circle cx="120" cy="140" r="13" fill="#f1f5f9" stroke="#64748b" strokeWidth="2" />
+                  <rect x="114" y="153" width="12" height="25" rx="6" fill="#34d399" />
+                  <rect x="126" y="153" width="8" height="25" rx="4" fill="#64748b" />
+                  {/* Arm connection */}
+                  <line x1="72" y1="180" x2="107" y2="147" stroke="#64748b" strokeWidth="4" />
+                  {/* Person 3 (middle right) */}
+                  <circle cx="180" cy="100" r="13" fill="#f1f5f9" stroke="#64748b" strokeWidth="2" />
+                  <rect x="174" y="113" width="12" height="25" rx="6" fill="#10b981" />
+                  <rect x="186" y="113" width="8" height="25" rx="4" fill="#64748b" />
+                  {/* Arm connection */}
+                  <line x1="133" y1="140" x2="167" y2="107" stroke="#64748b" strokeWidth="4" />
+                  {/* Person 4 (top right) */}
+                  <circle cx="300" cy="30" r="13" fill="#f1f5f9" stroke="#64748b" strokeWidth="2" />
+                  <rect x="294" y="43" width="12" height="25" rx="6" fill="#4f46e5" />
+                  <rect x="306" y="43" width="8" height="25" rx="4" fill="#64748b" />
+                  {/* Arm connection */}
+                  <line x1="193" y1="100" x2="287" y2="43" stroke="#64748b" strokeWidth="4" />
+                  {/* Clouds for background */}
+                  <ellipse cx="80" cy="40" rx="18" ry="7" fill="#e0e7ef" />
+                  <ellipse cx="350" cy="70" rx="14" ry="5" fill="#e0e7ef" />
+                </svg>
               </div>
             </div>
           </div>
