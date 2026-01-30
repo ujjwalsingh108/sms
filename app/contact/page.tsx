@@ -313,17 +313,7 @@ export default function ContactPage() {
                 )}
               </p>
 
-              <MapPicker
-                onLocationSelect={handleLocationSelect}
-                selectedLocation={
-                  formData.latitude && formData.longitude
-                    ? {
-                        latitude: formData.latitude,
-                        longitude: formData.longitude,
-                      }
-                    : undefined
-                }
-              />
+              <MapPicker />
             </div>
           </div>
         </div>
